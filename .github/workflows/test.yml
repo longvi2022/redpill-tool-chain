@@ -71,7 +71,7 @@ jobs:
 
           cat ${{matrix.platform}}_user_config.json
 
-      - name: 添加扩展驱动[ds3622xsp]
+      - name: 添加扩展驱动
         run: |
           echo '等待整理兼容性扩展~😀'
           ./redpill_tool_chain.sh add https://github.com/tossp/redpill-tool-chain/raw/master/extensions/redpill-boot-wait.json
@@ -82,6 +82,7 @@ jobs:
           ./redpill_tool_chain.sh add https://github.com/pocopico/rp-ext/blob/main/asix/rpext-index.json
           ./redpill_tool_chain.sh add https://github.com/pocopico/rp-ext/blob/main/r8101/rpext-index.json
           ./redpill_tool_chain.sh add https://github.com/pocopico/rp-ext/blob/main/r8169/rpext-index.json
+          
 
       - name: 添加 Misc shell
         run: |
